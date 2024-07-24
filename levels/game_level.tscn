@@ -17,6 +17,7 @@ tile_size = Vector2i(12, 12)
 sources/0 = SubResource("TileSetAtlasSource_5kt8o")
 
 [node name="GameLevel" type="Node2D"]
+y_sort_enabled = true
 
 [node name="playerCat" parent="." instance=ExtResource("1_03xr8")]
 position = Vector2(57, 27)
