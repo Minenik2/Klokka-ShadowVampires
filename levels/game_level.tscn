@@ -28,7 +28,7 @@ remote_path = NodePath("../../Camera2D")
 position = Vector2(57, 27)
 
 [node name="TileMap" type="TileMap" parent="."]
-scale = Vector2(1.4, 1.4)
+scale = Vector2(1.4, 1.41193)
 tile_set = SubResource("TileSet_7lnfn")
 format = 2
 layer_0/name = "layerBaseGround"
