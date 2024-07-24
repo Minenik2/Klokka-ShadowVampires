@@ -22,7 +22,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_w2vpu"]
 resource_name = "idle_down"
-length = 0.4
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -34,12 +33,11 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [0, 1]
+"values": [1, 0]
 }
 
-[sub_resource type="Animation" id="Animation_qupu8"]
-resource_name = "walk_down"
-length = 0.4
+[sub_resource type="Animation" id="Animation_5mu3e"]
+resource_name = "idle_left"
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -51,12 +49,11 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [2, 3]
+"values": [9, 8]
 }
 
-[sub_resource type="Animation" id="Animation_uuqav"]
-resource_name = "walk_up"
-length = 0.4
+[sub_resource type="Animation" id="Animation_a3q57"]
+resource_name = "idle_right"
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -68,7 +65,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [6, 7]
+"values": [13, 12]
 }
 
 [sub_resource type="Animation" id="Animation_7yah3"]
@@ -88,8 +85,8 @@ tracks/0/keys = {
 "values": [4, 5]
 }
 
-[sub_resource type="Animation" id="Animation_5mu3e"]
-resource_name = "idle_left"
+[sub_resource type="Animation" id="Animation_qupu8"]
+resource_name = "walk_down"
 length = 0.4
 loop_mode = 1
 tracks/0/type = "value"
@@ -102,24 +99,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [8, 9]
-}
-
-[sub_resource type="Animation" id="Animation_a3q57"]
-resource_name = "idle_right"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [12, 13]
+"values": [2, 3]
 }
 
 [sub_resource type="Animation" id="Animation_5wk11"]
@@ -154,6 +134,23 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [14, 15]
+}
+
+[sub_resource type="Animation" id="Animation_uuqav"]
+resource_name = "walk_up"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [6, 7]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8ivi6"]
