@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://oyqxnap3ivj2" path="res://art/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Spritesheet.png" id="1_d0w5j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_12vxg"]
-size = Vector2(10, 14)
+size = Vector2(7, 6)
 
 [sub_resource type="Animation" id="Animation_osdpr"]
 length = 0.001
@@ -231,6 +231,7 @@ states/walk/position = Vector2(538, 83)
 transitions = ["idle", "walk", SubResource("AnimationNodeStateMachineTransition_dwv67"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_p4kyu"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_poeiq")]
 
 [node name="playerCat" type="CharacterBody2D"]
+collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_d0w5j")
@@ -238,6 +239,7 @@ hframes = 4
 vframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 4)
 shape = SubResource("RectangleShape2D_12vxg")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

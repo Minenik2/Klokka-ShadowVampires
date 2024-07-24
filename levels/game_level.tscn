@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dlch62dwyq2lw"]
+[gd_scene load_steps=7 format=3 uid="uid://dlch62dwyq2lw"]
 
-[ext_resource type="PackedScene" uid="uid://ef5in378d5n2" path="res://characters/player_cat.tscn" id="1_03xr8"]
+[ext_resource type="PackedScene" uid="uid://ef5in378d5n2" path="res://characters/player.tscn" id="1_03xr8"]
 [ext_resource type="Script" path="res://characters/player_cat.gd" id="2_0oorx"]
 [ext_resource type="Texture2D" uid="uid://bjms0ru1p7d5a" path="res://art/myArt/floor.png" id="3_0jm6i"]
+[ext_resource type="PackedScene" uid="uid://bbq0tlcnpwvm7" path="res://Switch/Switch.tscn" id="4_fmuuw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5kt8o"]
 texture = ExtResource("3_0jm6i")
@@ -37,3 +38,21 @@ layer_0/tile_data = PackedInt32Array(0, 131072, 0, 1, 65536, 0, 2, 131072, 0, 3,
 layer_1/name = "TopGround"
 layer_1/z_index = -5
 layer_1/tile_data = PackedInt32Array()
+
+[node name="Switch" parent="." instance=ExtResource("4_fmuuw")]
+position = Vector2(100, 25)
+
+[node name="Switch2" parent="." instance=ExtResource("4_fmuuw")]
+position = Vector2(81, 66)
+
+[node name="Switch3" parent="." instance=ExtResource("4_fmuuw")]
+position = Vector2(119, 55)
+
+[node name="Switch4" parent="." instance=ExtResource("4_fmuuw")]
+position = Vector2(134, 28)
+
+[node name="Switch5" parent="." instance=ExtResource("4_fmuuw")]
+position = Vector2(45, 71)
+
+[node name="Switch6" parent="." instance=ExtResource("4_fmuuw")]
+position = Vector2(134, 79)

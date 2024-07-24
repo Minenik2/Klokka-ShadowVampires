@@ -6,6 +6,9 @@ extends CharacterBody2D
 @onready var animation_tree = $AnimationTree
 @onready var state_machine = animation_tree.get("parameters/playback")
 
+var interact_key = "interact" # The key for interaction, usually set to "E" or "Enter"
+var interaction_radius = 20
+
 func _ready():
 	update_animation_parameters(starting_direction)
 
@@ -20,6 +23,10 @@ func _physics_process(_delta):
 	
 	move_and_slide()
 	pick_new_state()
+	
+	if Input.is_action_just_pressed(interact_key):
+		print("hello")
+		interact()
 
 func update_animation_parameters(move_input : Vector2):
 	if(move_input != Vector2.ZERO):
@@ -31,3 +38,30 @@ func pick_new_state():
 		state_machine.travel("walk")
 	else:
 		state_machine.travel("idle")
+
+
+   
+
+func interact():
+	var space_state = get_world_2d().direct_space_state
+	var query_shape = CircleShape2D.new()
+	query_shape.radius = interaction_radius
+	var query_params = PhysicsShapeQueryParameters2D.new()
+	query_params.set_shape(query_shape)
+	query_params.set_transform(global_transform)
+	query_params.set_collision_mask(1)
+	var result = space_state.intersect_shape(query_params)
+	
+	for collider in result:
+		if collider.collider.has_method("flip_switch"):
+			print("flipping Switch:", collider.collider)
+			collider.collider.flip_switch() 
+			break # Stop after the first switch is flipped
+
+
+
+
+
+
+
+   

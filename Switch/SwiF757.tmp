@@ -1,0 +1,103 @@
+[gd_scene load_steps=11 format=3 uid="uid://bbq0tlcnpwvm7"]
+
+[ext_resource type="Script" path="res://Switch/Switch.gd" id="1_knh37"]
+[ext_resource type="Texture2D" uid="uid://ckuy14efcberx" path="res://art/myArt/switch.png" id="1_r4h02"]
+[ext_resource type="PackedScene" uid="uid://djv54loyfjcxs" path="res://Interaction/Interaction area/Interaction_area.tscn" id="3_vl638"]
+
+[sub_resource type="Animation" id="Animation_rqe6x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_0tggp"]
+resource_name = "SwitchAnimationOFF"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_g7wgk"]
+resource_name = "SwitchAnimationON"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 0]
+}
+
+[sub_resource type="Animation" id="Animation_tuenk"]
+resource_name = "SwitchIdle"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j2htw"]
+_data = {
+"RESET": SubResource("Animation_rqe6x"),
+"SwitchAnimationOFF": SubResource("Animation_0tggp"),
+"SwitchAnimationON": SubResource("Animation_g7wgk"),
+"SwitchIdle": SubResource("Animation_tuenk")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bkdq3"]
+size = Vector2(12, 4)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mne6o"]
+radius = 9.0
+
+[node name="Switch" type="CharacterBody2D"]
+script = ExtResource("1_knh37")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_r4h02")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_j2htw")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_bkdq3")
+
+[node name="InteractionArea" parent="." instance=ExtResource("3_vl638")]
+action_name = "toggle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_mne6o")

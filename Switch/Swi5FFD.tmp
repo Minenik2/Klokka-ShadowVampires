@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://bbq0tlcnpwvm7"]
+
+[ext_resource type="Script" path="res://Switch/Switch.gd" id="1_knh37"]
+[ext_resource type="Texture2D" uid="uid://ckuy14efcberx" path="res://art/myArt/switch.png" id="1_r4h02"]
+[ext_resource type="PackedScene" uid="uid://djv54loyfjcxs" path="res://Interaction/Interaction area/Interaction_area.tscn" id="3_vl638"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pe1eo"]
+size = Vector2(12, 4)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eoprv"]
+radius = 9.0
+
+[node name="Switch" type="StaticBody2D"]
+script = ExtResource("1_knh37")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_r4h02")
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_pe1eo")
+
+[node name="InteractionArea" parent="." instance=ExtResource("3_vl638")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_eoprv")
