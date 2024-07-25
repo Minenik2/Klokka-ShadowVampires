@@ -1,5 +1,6 @@
 extends StaticBody2D
 
+@export var laser_beam_scene: Node2D
 @onready var sprite = $Sprite2D
 @onready var laser = get_node("../Laser") # Adjust the path to your laser node if different
 var is_on = false
@@ -22,7 +23,9 @@ func flip_switch():
 	
 func update_laser():
 	if is_on:
-		laser.activate_laser()
+		#laser.activate_laser()
+		laser_beam_scene.activate_laser()
 	else:
-		laser.deactivate_laser()
+		#laser.deactivate_laser()
+		laser_beam_scene.deactivate_laser()
 

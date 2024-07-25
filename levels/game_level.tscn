@@ -123,8 +123,9 @@ layer_1/tile_data = PackedInt32Array()
 unique_name_in_owner = true
 position = Vector2(14, 26)
 
-[node name="Switch" parent="." instance=ExtResource("4_fmuuw")]
+[node name="Switch" parent="." node_paths=PackedStringArray("laser_beam_scene") instance=ExtResource("4_fmuuw")]
 position = Vector2(100, 25)
+laser_beam_scene = NodePath("../Laser")
 
 [node name="Switch2" parent="." instance=ExtResource("4_fmuuw")]
 position = Vector2(81, 66)
