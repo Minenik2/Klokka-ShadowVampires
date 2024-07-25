@@ -1,5 +1,6 @@
 extends StaticBody2D
 
+@export var direction: Vector2 = Vector2.RIGHT
 var is_active = false
 
 func _ready():
