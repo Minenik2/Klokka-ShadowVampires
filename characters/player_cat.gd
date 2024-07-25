@@ -7,7 +7,7 @@ extends CharacterBody2D
 @onready var state_machine = animation_tree.get("parameters/playback")
 
 var interact_key = "interact" # The key for interaction, usually set to "E" or "Enter"
-var interaction_radius = 20
+var interaction_radius = 10
 
 func _ready():
 	update_animation_parameters(starting_direction)
@@ -25,7 +25,6 @@ func _physics_process(_delta):
 	pick_new_state()
 	
 	if Input.is_action_just_pressed(interact_key):
-		print("hello")
 		interact()
 
 func update_animation_parameters(move_input : Vector2):

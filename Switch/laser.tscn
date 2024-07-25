@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcbf1pquvhjng"]
+
+[ext_resource type="Script" path="res://Laser.gd" id="1_en7iy"]
+[ext_resource type="Texture2D" uid="uid://cnbc3ww87irxv" path="res://art/myArt/tower.png" id="2_h5xb0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqpig"]
+size = Vector2(10, 22)
+
+[node name="Laser" type="StaticBody2D"]
+script = ExtResource("1_en7iy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_h5xb0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_lqpig")
