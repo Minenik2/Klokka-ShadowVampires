@@ -127,8 +127,9 @@ position = Vector2(14, 26)
 position = Vector2(100, 25)
 laser_beam_scene = NodePath("../Laser")
 
-[node name="Switch2" parent="." instance=ExtResource("4_fmuuw")]
+[node name="Switch2" parent="." node_paths=PackedStringArray("laser_beam_scene") instance=ExtResource("4_fmuuw")]
 position = Vector2(81, 66)
+laser_beam_scene = NodePath("../Laser")
 
 [node name="Switch3" parent="." instance=ExtResource("4_fmuuw")]
 position = Vector2(119, 55)

@@ -22,10 +22,16 @@ func flip_switch():
 	update_laser()
 	
 func update_laser():
-	if is_on:
+	if !laser_beam_scene.is_active:
 		#laser.activate_laser()
 		laser_beam_scene.activate_laser()
 	else:
 		#laser.deactivate_laser()
 		laser_beam_scene.deactivate_laser()
+		
+# func _ready():
+#   if target_node:
+#       target_node.perform_action()  # Call the method on the exported node
+#   else:
+#       print("Target node is not assigned!")
 
