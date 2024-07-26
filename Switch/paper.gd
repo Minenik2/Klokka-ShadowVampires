@@ -4,3 +4,4 @@ extends StaticBody2D
 
 func flip_switch():
 	dialogue_box.visible = true
+	visible = false
