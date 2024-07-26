@@ -5,6 +5,7 @@ extends Node2D
 @export var line_color: Color = Color.CADET_BLUE
 @export var direction: Vector2 = Vector2.RIGHT
 @export var is_active: bool = true
+@export var rotate: int = 90
 
 var line_length: float = 0.0
 var line_visual: Line2D
@@ -33,7 +34,7 @@ func _process(delta):
 			line_length = global_position.distance_to(collision_point)
 			# Configure the CollisionShape2D
 			$CollisionShape2D.shape = RectangleShape2D.new()
-			$CollisionShape2D.rotation_degrees = 90
+			$CollisionShape2D.rotation_degrees = rotate
 			$CollisionShape2D.shape.extents = Vector2(line_length, line_width)
 			#$CollisionShape2D.clear_points()
 			#$CollisionShape2D.add_point(Vector2.ZERO)
