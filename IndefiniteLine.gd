@@ -25,6 +25,9 @@ func _ready():
 	add_child(line_visual)
 	line_visual.width = line_width
 	line_visual.default_color = line_color
+	
+	line_visual.visible = is_active
+	$CollisionShape2D.disabled = not is_active
 
 func _process(delta):
 	var raycast = $RayCast2D as RayCast2D
