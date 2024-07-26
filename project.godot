@@ -22,6 +22,10 @@ window/size/viewport_height=680
 window/stretch/mode="canvas_items"
 window/stretch/scale=4.0
 
+[gui]
+
+theme/custom="res://myTheme.tres"
+
 [input]
 
 right={

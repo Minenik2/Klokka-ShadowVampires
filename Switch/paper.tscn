@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1ywkqq5fdp5o"]
+
+[ext_resource type="Texture2D" uid="uid://ppiu664hrp2i" path="res://art/myArt/paper.png" id="1_6x6dx"]
+[ext_resource type="Script" path="res://Switch/paper.gd" id="1_ojfd2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5d74"]
+size = Vector2(12, 12)
+
+[node name="Paper" type="StaticBody2D"]
+script = ExtResource("1_ojfd2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_p5d74")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_6x6dx")

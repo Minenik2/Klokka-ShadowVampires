@@ -1,0 +1,11 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://dh6l305f501cp"]
+
+[ext_resource type="FontFile" uid="uid://dvnlj31vpdtp4" path="res://font/cute-prop/retro-pixel-cute-prop.ttf" id="1_4o4v6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x4fvv"]
+
+[resource]
+BigPanelContainer/base_type = &"PanelContainer"
+BigPanelContainer/styles/panel = SubResource("StyleBoxTexture_x4fvv")
+Label/font_sizes/font_size = 11
+Label/fonts/font = ExtResource("1_4o4v6")
