@@ -1,15 +1,15 @@
 [gd_scene load_steps=5 format=3 uid="uid://is8f2nkogira"]
 
 [ext_resource type="Script" path="res://Laser_Turret.gd" id="1_w5e81"]
+[ext_resource type="PackedScene" uid="uid://cm1e0awy2ocon" path="res://Switch/indefinite_line.tscn" id="2_b517g"]
 [ext_resource type="Texture2D" uid="uid://cnbc3ww87irxv" path="res://art/myArt/tower.png" id="2_mdjls"]
-[ext_resource type="PackedScene" uid="uid://bcbf1pquvhjng" path="res://Switch/laser.tscn" id="2_vwgwv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f340b"]
 size = Vector2(10, 22)
 
 [node name="Laser_Turret" type="Node2D"]
 script = ExtResource("1_w5e81")
-laser_beam_scene = ExtResource("2_vwgwv")
+laser_beam_scene = ExtResource("2_b517g")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

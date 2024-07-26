@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cm1e0awy2ocon"]
+
+[ext_resource type="Script" path="res://IndefiniteLine.gd" id="1_ynh5q"]
+
+[sub_resource type="GDScript" id="GDScript_idatm"]
+
+[sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_2b2fs"]
+
+[node name="IndefiniteLine" type="StaticBody2D"]
+script = ExtResource("1_ynh5q")
+direction = Vector2(0, -1)
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, 10000)
+script = SubResource("GDScript_idatm")
+
+[node name="Line2D" type="Line2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("SeparationRayShape2D_2b2fs")
