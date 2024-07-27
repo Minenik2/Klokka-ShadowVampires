@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://is8f2nkogira" path="res://Switch/laser_turret.tscn" id="4_keokd"]
 [ext_resource type="PackedScene" uid="uid://6on3qgshr4vk" path="res://Switch/indefinite_line_right.tscn" id="5_0ysdw"]
 [ext_resource type="PackedScene" uid="uid://dfdt4kgbumhl2" path="res://levels/teleporter.tscn" id="6_6qlg1"]
-[ext_resource type="PackedScene" uid="uid://bjprxx1khoxix" path="res://levels/game_level_6.tscn" id="7_oblm8"]
+[ext_resource type="PackedScene" path="res://levels/game_level_6.tscn" id="7_oblm8"]
 
 [node name="game_level_5" type="Node2D"]
 y_sort_enabled = true

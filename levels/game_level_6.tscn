@@ -1,12 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bjprxx1khoxix"]
+[gd_scene load_steps=6 format=3 uid="uid://bb3xieb7teyxd"]
 
 [ext_resource type="TileSet" uid="uid://bq1phjaxakua6" path="res://levels/new_tile_set.tres" id="1_1fx8a"]
 [ext_resource type="PackedScene" uid="uid://ef5in378d5n2" path="res://characters/player.tscn" id="2_rwmqq"]
 [ext_resource type="PackedScene" uid="uid://is8f2nkogira" path="res://Switch/laser_turret.tscn" id="3_tmi72"]
 [ext_resource type="PackedScene" uid="uid://bbq0tlcnpwvm7" path="res://Switch/Switch.tscn" id="4_m8g36"]
 [ext_resource type="PackedScene" uid="uid://6on3qgshr4vk" path="res://Switch/indefinite_line_right.tscn" id="5_havag"]
-[ext_resource type="PackedScene" uid="uid://dfdt4kgbumhl2" path="res://levels/teleporter.tscn" id="6_sdqnf"]
-[ext_resource type="PackedScene" uid="uid://ct8cjrxu0yjql" path="res://levels/game_level_5.tscn" id="7_2gcsy"]
 
 [node name="GameLevel6" type="Node2D"]
 y_sort_enabled = true
@@ -66,7 +64,3 @@ laser_beam_scene = NodePath("../Laser_Turret4")
 [node name="Laser_Turret5" parent="." instance=ExtResource("3_tmi72")]
 position = Vector2(427, 354)
 laser_beam_scene = ExtResource("5_havag")
-
-[node name="exit" parent="." instance=ExtResource("6_sdqnf")]
-position = Vector2(428, 392)
-next_scene = ExtResource("7_2gcsy")
