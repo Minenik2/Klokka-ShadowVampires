@@ -125,7 +125,6 @@ y_sort_enabled = true
 
 [node name="playerCat" parent="." instance=ExtResource("1_03xr8")]
 position = Vector2(57, 27)
-collision_layer = 1
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="playerCat"]
 remote_path = NodePath("../../Camera2D")

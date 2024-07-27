@@ -67,7 +67,6 @@ laser_beam_scene = NodePath("../Laser_Turret2")
 
 [node name="playerCat" parent="." instance=ExtResource("5_0l7cr")]
 position = Vector2(248, 101)
-collision_layer = 1
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="playerCat"]
 remote_path = NodePath("../../Camera2D")
