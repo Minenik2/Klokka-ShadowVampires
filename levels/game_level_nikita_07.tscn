@@ -84,5 +84,5 @@ autowrap_mode = 2
 
 [node name="Label" type="Label" parent="DialogueBox/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Day 22: Progress seems slow, even after dedicating my life to studying alchemy, I can't help but feel... Incompetent? over my 20 years of studies I've never once even seen a shadow vampire in person."
+text = "Day 22: Progress seems slow, even after dedicating my life to studying alchemy, I can't help but feel... Incompetent? Over my 20 years of studies I've never once even seen a shadow vampire in person."
 autowrap_mode = 2
