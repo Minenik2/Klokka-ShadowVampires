@@ -9,7 +9,8 @@ func _ready():
 
 func _physics_process(_delta):
 	if Input.is_action_just_pressed(interact_key) && visible == true && page == 0:
-		$PanelContainer/MarginContainer/VBoxContainer/Label.text = "It's the year 1477, vampires have never been a problem in this side of the country, why are they showing up now?"
+		visible = true
+		#$PanelContainer/MarginContainer/VBoxContainer/Label.text = "It's the year 1477, vampires have never been a problem in this side of the country, why are they showing up now?"
 		page = page + 1
 		add_child(timer)
 		timer.wait_time = 1.0
@@ -19,9 +20,10 @@ func _physics_process(_delta):
 		await timer.timeout
 		#visible = false
 	if Input.is_action_just_pressed(interact_key) && visible == true && page == 1:
-		page = page + 1
-		$PanelContainer/MarginContainer/VBoxContainer/Label.text = "it's me"
-		timer.start()
-		await timer.timeout
-	if Input.is_action_just_pressed(interact_key) && visible == true && page == 2:
 		visible = false
+		#page = page + 1
+		#$PanelContainer/MarginContainer/VBoxContainer/Label.text = "it's me"
+		#timer.start()
+		#await timer.timeout
+	#if Input.is_action_just_pressed(interact_key) && visible == true && page == 2:
+	#	visible = false

@@ -1,12 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://3oydpwdy8r0b"]
+[gd_scene load_steps=10 format=3 uid="uid://3oydpwdy8r0b"]
 
 [ext_resource type="PackedScene" uid="uid://ef5in378d5n2" path="res://characters/player.tscn" id="1_qnvdw"]
 [ext_resource type="TileSet" uid="uid://bq1phjaxakua6" path="res://levels/new_tile_set.tres" id="2_m7gfv"]
 [ext_resource type="PackedScene" uid="uid://is8f2nkogira" path="res://Switch/laser_turret.tscn" id="3_lss0u"]
 [ext_resource type="PackedScene" uid="uid://bbq0tlcnpwvm7" path="res://Switch/Switch.tscn" id="4_5bgtt"]
-[ext_resource type="PackedScene" uid="uid://bdm0jip2s78qn" path="res://Switch/indefinite_line_right_not_active.tscn" id="4_r61ra"]
-[ext_resource type="PackedScene" uid="uid://ct8cjrxu0yjql" path="res://levels/game_level_5.tscn" id="7_fgosl"]
+[ext_resource type="PackedScene" path="res://Switch/indefinite_line_right_not_active.tscn" id="4_r61ra"]
 [ext_resource type="PackedScene" uid="uid://dfdt4kgbumhl2" path="res://levels/teleporter.tscn" id="7_iifol"]
+[ext_resource type="PackedScene" uid="uid://bg8yxehs0aew8" path="res://levels/game_level_nikita_01.tscn" id="7_wkhk4"]
+[ext_resource type="PackedScene" uid="uid://c1ywkqq5fdp5o" path="res://Switch/paper.tscn" id="8_bc6hl"]
+[ext_resource type="Script" path="res://levels/DialogueBox.gd" id="9_y4r34"]
 
 [node name="game_level_4" type="Node2D"]
 y_sort_enabled = true
@@ -44,7 +46,7 @@ laser_beam_scene4 = NodePath("../Laser_Turret4")
 [node name="exit" parent="." instance=ExtResource("7_iifol")]
 position = Vector2(316, 537)
 scale = Vector2(0.152941, 0.972603)
-next_scene = ExtResource("7_fgosl")
+next_scene = ExtResource("7_wkhk4")
 
 [node name="Laser_Turret4" parent="." instance=ExtResource("3_lss0u")]
 position = Vector2(496, 371)
@@ -60,3 +62,35 @@ laser_beam_scene = NodePath("../Laser_Turret")
 laser_beam_scene2 = NodePath("../Laser_Turret2")
 laser_beam_scene3 = NodePath("../Laser_Turret3")
 laser_beam_scene4 = NodePath("../Laser_Turret4")
+
+[node name="Paper" parent="." node_paths=PackedStringArray("dialogue_box") instance=ExtResource("8_bc6hl")]
+position = Vector2(389, 533)
+dialogue_box = NodePath("../DialogueBox")
+
+[node name="DialogueBox" type="CanvasLayer" parent="."]
+script = ExtResource("9_y4r34")
+
+[node name="PanelContainer" type="PanelContainer" parent="DialogueBox"]
+texture_filter = 1
+offset_right = 217.0
+offset_bottom = 125.0
+
+[node name="MarginContainer" type="MarginContainer" parent="DialogueBox/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogueBox/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="DialogueBox/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"HeaderSmall"
+text = "Diary Notes:"
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="DialogueBox/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Day 3: Am I really the most competent alchemist in this side of town? Could they have not found somebody better for the job? Either way progress seems to be going slow, I have nowhere to begin looking for a solution for the shadow vampires"
+autowrap_mode = 2
