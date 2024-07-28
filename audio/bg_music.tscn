@@ -1,0 +1,17 @@
+[gd_scene load_steps=6 format=3 uid="uid://cw0ovuqxg4o1i"]
+
+[ext_resource type="AudioStream" uid="uid://b8m5jqxmo8lqd" path="res://audio/sepia.wav" id="1_8u6bl"]
+[ext_resource type="Script" path="res://audio/bg_music.gd" id="1_uuksr"]
+[ext_resource type="AudioStream" uid="uid://bglkpmddusekq" path="res://audio/gyatt.wav" id="2_a15xo"]
+[ext_resource type="AudioStream" uid="uid://dbuky0lcqi7ks" path="res://audio/sepira.wav" id="4_mywup"]
+[ext_resource type="AudioStream" uid="uid://nmwh6djwvo8m" path="res://audio/uguuu.wav" id="5_n6pwf"]
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("music_player")]
+script = ExtResource("1_uuksr")
+music_player = NodePath("bg_music")
+songs = Array[AudioStream]([ExtResource("2_a15xo"), ExtResource("1_8u6bl"), ExtResource("4_mywup"), ExtResource("5_n6pwf")])
+
+[node name="bg_music" type="AudioStreamPlayer2D" parent="."]
+volume_db = -3.0
+autoplay = true
+panning_strength = 0.0

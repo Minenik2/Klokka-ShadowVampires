@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dwv2hhywpnvri"]
+[gd_scene load_steps=11 format=3 uid="uid://dwv2hhywpnvri"]
 
 [ext_resource type="TileSet" uid="uid://bq1phjaxakua6" path="res://levels/new_tile_set.tres" id="1_f4xqq"]
 [ext_resource type="PackedScene" uid="uid://is8f2nkogira" path="res://Switch/laser_turret.tscn" id="2_fv1sx"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ef5in378d5n2" path="res://characters/player.tscn" id="4_cgbmv"]
 [ext_resource type="PackedScene" uid="uid://6on3qgshr4vk" path="res://Switch/indefinite_line_right.tscn" id="5_xb245"]
 [ext_resource type="PackedScene" uid="uid://dfdt4kgbumhl2" path="res://levels/teleporter.tscn" id="7_ygavo"]
+[ext_resource type="PackedScene" uid="uid://bcvdsu1db07cq" path="res://levels/game_level_nikita_04.tscn" id="8_6xq7v"]
 [ext_resource type="PackedScene" uid="uid://c1ywkqq5fdp5o" path="res://Switch/paper.tscn" id="8_l2hcy"]
 [ext_resource type="Script" path="res://levels/DialogueBox.gd" id="9_03s5g"]
 
@@ -62,6 +63,7 @@ position = Vector2(577, 456)
 
 [node name="exit" parent="." instance=ExtResource("7_ygavo")]
 position = Vector2(408, 577)
+next_scene = ExtResource("8_6xq7v")
 
 [node name="Paper" parent="." node_paths=PackedStringArray("dialogue_box") instance=ExtResource("8_l2hcy")]
 position = Vector2(450, 561)
