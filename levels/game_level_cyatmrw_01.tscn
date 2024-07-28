@@ -33,98 +33,6 @@ position = Vector2(156, 254)
 position = Vector2(102, 15)
 laser_direction = Vector2(0, 1)
 
-[node name="Laser_Turret2" parent="Laser_Turret" instance=ExtResource("4_31gx0")]
-position = Vector2(12, 0)
-laser_direction = Vector2(0, 1)
-
-[node name="Laser_Turret3" parent="Laser_Turret" instance=ExtResource("4_31gx0")]
-position = Vector2(-59, 22)
-laser_beam_scene = ExtResource("6_s1vtf")
-
-[node name="Laser_Turret4" parent="Laser_Turret" instance=ExtResource("4_31gx0")]
-position = Vector2(-59, 106)
-laser_beam_scene = ExtResource("6_s1vtf")
-
-[node name="Laser_Turret5" parent="Laser_Turret" instance=ExtResource("4_31gx0")]
-position = Vector2(80, -4)
-laser_direction = Vector2(0, 1)
-
-[node name="Laser_Turret6" parent="Laser_Turret" instance=ExtResource("4_31gx0")]
-position = Vector2(95, -4)
-laser_direction = Vector2(0, 1)
-
-[node name="Laser_Turret7" parent="Laser_Turret" instance=ExtResource("4_31gx0")]
-position = Vector2(157, -13)
-laser_direction = Vector2(0, 1)
-
-[node name="Laser_Turret8" parent="Laser_Turret" instance=ExtResource("4_31gx0")]
-position = Vector2(144, 113)
-laser_beam_scene = ExtResource("6_s1vtf")
-
-[node name="Laser_Turret9" parent="Laser_Turret" instance=ExtResource("4_31gx0")]
-position = Vector2(48, 216)
-laser_beam_scene = ExtResource("6_s1vtf")
-
-[node name="Laser_Turret10" parent="Laser_Turret" instance=ExtResource("4_31gx0")]
-position = Vector2(142, 184)
-laser_beam_scene = ExtResource("6_s1vtf")
-
-[node name="Laser_Turret11" parent="Laser_Turret" instance=ExtResource("4_31gx0")]
-position = Vector2(211, 186)
-laser_direction = Vector2(0, 1)
-
-[node name="Switch" parent="." node_paths=PackedStringArray("laser_beam_scene") instance=ExtResource("5_r1ns8")]
-position = Vector2(78, 72)
-laser_beam_scene = NodePath("../Laser_Turret")
-
-[node name="Switch2" parent="Switch" node_paths=PackedStringArray("laser_beam_scene") instance=ExtResource("5_r1ns8")]
-position = Vector2(-28, 17)
-laser_beam_scene = NodePath("../../Laser_Turret/Laser_Turret3")
-
-[node name="Switch3" parent="Switch" node_paths=PackedStringArray("laser_beam_scene") instance=ExtResource("5_r1ns8")]
-position = Vector2(-34, -53)
-laser_beam_scene = NodePath("../../Laser_Turret/Laser_Turret4")
-
-[node name="Switch4" parent="Switch" node_paths=PackedStringArray("laser_beam_scene") instance=ExtResource("5_r1ns8")]
-position = Vector2(-34, 72)
-laser_beam_scene = NodePath("../../Laser_Turret/Laser_Turret2")
-
-[node name="Switch5" parent="Switch" node_paths=PackedStringArray("laser_beam_scene", "laser_beam_scene2", "laser_beam_scene3") instance=ExtResource("5_r1ns8")]
-position = Vector2(71, -41)
-laser_beam_scene = NodePath("../../Laser_Turret/Laser_Turret5")
-laser_beam_scene2 = NodePath("../../Laser_Turret/Laser_Turret6")
-laser_beam_scene3 = NodePath("../../Laser_Turret/Laser_Turret7")
-
-[node name="Switch6" parent="Switch" node_paths=PackedStringArray("laser_beam_scene", "laser_beam_scene2", "laser_beam_scene3", "laser_beam_scene4") instance=ExtResource("5_r1ns8")]
-position = Vector2(70, 68)
-laser_beam_scene = NodePath("../../Laser_Turret/Laser_Turret5")
-laser_beam_scene2 = NodePath("../../Laser_Turret/Laser_Turret6")
-laser_beam_scene3 = NodePath("../../Laser_Turret")
-laser_beam_scene4 = NodePath("../../Laser_Turret/Laser_Turret2")
-
-[node name="Switch7" parent="Switch" node_paths=PackedStringArray("laser_beam_scene", "laser_beam_scene2") instance=ExtResource("5_r1ns8")]
-position = Vector2(201, -66)
-laser_beam_scene = NodePath("../../Laser_Turret/Laser_Turret7")
-laser_beam_scene2 = NodePath("../../Laser_Turret/Laser_Turret8")
-
-[node name="Switch8" parent="Switch" node_paths=PackedStringArray("laser_beam_scene", "laser_beam_scene2") instance=ExtResource("5_r1ns8")]
-position = Vector2(150, 15)
-laser_beam_scene = NodePath("../../Laser_Turret/Laser_Turret7")
-laser_beam_scene2 = NodePath("../../Laser_Turret/Laser_Turret10")
-
-[node name="Switch9" parent="Switch" node_paths=PackedStringArray("laser_beam_scene", "laser_beam_scene2") instance=ExtResource("5_r1ns8")]
-position = Vector2(215, 76)
-laser_beam_scene = NodePath("../../Laser_Turret/Laser_Turret7")
-laser_beam_scene2 = NodePath("../../Laser_Turret/Laser_Turret10")
-
-[node name="Switch10" parent="Switch" node_paths=PackedStringArray("laser_beam_scene") instance=ExtResource("5_r1ns8")]
-position = Vector2(286, 134)
-laser_beam_scene = NodePath("../../Laser_Turret/Laser_Turret9")
-
-[node name="Switch11" parent="Switch" node_paths=PackedStringArray("laser_beam_scene") instance=ExtResource("5_r1ns8")]
-position = Vector2(72, 138)
-laser_beam_scene = NodePath("../../Laser_Turret/Laser_Turret11")
-
 [node name="Paper" parent="." node_paths=PackedStringArray("dialogue_box") instance=ExtResource("7_naylk")]
 position = Vector2(361, 245)
 dialogue_box = NodePath("../DialogueBox")
@@ -158,3 +66,95 @@ layout_mode = 2
 text = "In truth, the nature of these vampiric creatures astounds me greatly. Their propensity for violence is perplexing, given the profound beauty that can be found in love and harmony.
 "
 autowrap_mode = 2
+
+[node name="Switch2" parent="." node_paths=PackedStringArray("laser_beam_scene") instance=ExtResource("5_r1ns8")]
+position = Vector2(50, 89)
+laser_beam_scene = NodePath("../Laser_Turret3")
+
+[node name="Switch3" parent="." node_paths=PackedStringArray("laser_beam_scene") instance=ExtResource("5_r1ns8")]
+position = Vector2(44, 19)
+laser_beam_scene = NodePath("../Laser_Turret4")
+
+[node name="Switch4" parent="." node_paths=PackedStringArray("laser_beam_scene") instance=ExtResource("5_r1ns8")]
+position = Vector2(44, 144)
+laser_beam_scene = NodePath("../Laser_Turret2")
+
+[node name="Switch5" parent="." node_paths=PackedStringArray("laser_beam_scene", "laser_beam_scene2", "laser_beam_scene3") instance=ExtResource("5_r1ns8")]
+position = Vector2(149, 31)
+laser_beam_scene = NodePath("../Laser_Turret5")
+laser_beam_scene2 = NodePath("../Laser_Turret6")
+laser_beam_scene3 = NodePath("../Laser_Turret7")
+
+[node name="Switch6" parent="." node_paths=PackedStringArray("laser_beam_scene", "laser_beam_scene2", "laser_beam_scene3", "laser_beam_scene4") instance=ExtResource("5_r1ns8")]
+position = Vector2(148, 140)
+laser_beam_scene = NodePath("../Laser_Turret5")
+laser_beam_scene2 = NodePath("../Laser_Turret6")
+laser_beam_scene3 = NodePath("../Laser_Turret")
+laser_beam_scene4 = NodePath("../Laser_Turret2")
+
+[node name="Switch7" parent="." node_paths=PackedStringArray("laser_beam_scene", "laser_beam_scene2") instance=ExtResource("5_r1ns8")]
+position = Vector2(279, 6)
+laser_beam_scene = NodePath("../Laser_Turret7")
+laser_beam_scene2 = NodePath("../Laser_Turret8")
+
+[node name="Switch8" parent="." node_paths=PackedStringArray("laser_beam_scene", "laser_beam_scene2") instance=ExtResource("5_r1ns8")]
+position = Vector2(228, 87)
+laser_beam_scene = NodePath("../Laser_Turret7")
+laser_beam_scene2 = NodePath("../Laser_Turret10")
+
+[node name="Switch9" parent="." node_paths=PackedStringArray("laser_beam_scene", "laser_beam_scene2") instance=ExtResource("5_r1ns8")]
+position = Vector2(293, 148)
+laser_beam_scene = NodePath("../Laser_Turret7")
+laser_beam_scene2 = NodePath("../Laser_Turret10")
+
+[node name="Switch10" parent="." node_paths=PackedStringArray("laser_beam_scene") instance=ExtResource("5_r1ns8")]
+position = Vector2(364, 206)
+laser_beam_scene = NodePath("../Laser_Turret9")
+
+[node name="Switch11" parent="." node_paths=PackedStringArray("laser_beam_scene") instance=ExtResource("5_r1ns8")]
+position = Vector2(150, 210)
+laser_beam_scene = NodePath("../Laser_Turret11")
+
+[node name="Switch" parent="." node_paths=PackedStringArray("laser_beam_scene") instance=ExtResource("5_r1ns8")]
+position = Vector2(78, 72)
+laser_beam_scene = NodePath("../Laser_Turret")
+
+[node name="Laser_Turret2" parent="." instance=ExtResource("4_31gx0")]
+position = Vector2(114, 15)
+laser_direction = Vector2(0, 1)
+
+[node name="Laser_Turret3" parent="." instance=ExtResource("4_31gx0")]
+position = Vector2(43, 37)
+laser_beam_scene = ExtResource("6_s1vtf")
+
+[node name="Laser_Turret4" parent="." instance=ExtResource("4_31gx0")]
+position = Vector2(43, 121)
+laser_beam_scene = ExtResource("6_s1vtf")
+
+[node name="Laser_Turret5" parent="." instance=ExtResource("4_31gx0")]
+position = Vector2(182, 11)
+laser_direction = Vector2(0, 1)
+
+[node name="Laser_Turret6" parent="." instance=ExtResource("4_31gx0")]
+position = Vector2(197, 11)
+laser_direction = Vector2(0, 1)
+
+[node name="Laser_Turret7" parent="." instance=ExtResource("4_31gx0")]
+position = Vector2(259, 2)
+laser_direction = Vector2(0, 1)
+
+[node name="Laser_Turret8" parent="." instance=ExtResource("4_31gx0")]
+position = Vector2(246, 128)
+laser_beam_scene = ExtResource("6_s1vtf")
+
+[node name="Laser_Turret9" parent="." instance=ExtResource("4_31gx0")]
+position = Vector2(150, 231)
+laser_beam_scene = ExtResource("6_s1vtf")
+
+[node name="Laser_Turret10" parent="." instance=ExtResource("4_31gx0")]
+position = Vector2(244, 199)
+laser_beam_scene = ExtResource("6_s1vtf")
+
+[node name="Laser_Turret11" parent="." instance=ExtResource("4_31gx0")]
+position = Vector2(313, 201)
+laser_direction = Vector2(0, 1)
