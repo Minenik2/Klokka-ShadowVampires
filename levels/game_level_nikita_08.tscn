@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://b04o85iew4lw"]
+[gd_scene load_steps=10 format=3 uid="uid://b04o85iew4lw"]
 
 [ext_resource type="TileSet" uid="uid://bq1phjaxakua6" path="res://levels/new_tile_set.tres" id="1_d17ku"]
 [ext_resource type="PackedScene" uid="uid://dfdt4kgbumhl2" path="res://levels/teleporter.tscn" id="2_2xe6c"]
 [ext_resource type="PackedScene" uid="uid://ef5in378d5n2" path="res://characters/player.tscn" id="3_4ah7u"]
+[ext_resource type="PackedScene" uid="uid://qdw22a511gtc" path="res://levels/game_level_nikita_09.tscn" id="3_8hvkp"]
 [ext_resource type="PackedScene" uid="uid://is8f2nkogira" path="res://Switch/laser_turret.tscn" id="4_o15mh"]
 [ext_resource type="PackedScene" uid="uid://bbq0tlcnpwvm7" path="res://Switch/Switch.tscn" id="5_osqph"]
 [ext_resource type="PackedScene" uid="uid://6on3qgshr4vk" path="res://Switch/indefinite_line_right.tscn" id="5_slpn4"]
@@ -19,6 +20,7 @@ layer_0/tile_data = PackedInt32Array(1310740, 65539, 2, 1310741, 65539, 2, 13107
 
 [node name="exit" parent="." instance=ExtResource("2_2xe6c")]
 position = Vector2(251, 265)
+next_scene = ExtResource("3_8hvkp")
 
 [node name="playerCat" parent="." instance=ExtResource("3_4ah7u")]
 position = Vector2(541, 385)

@@ -83,5 +83,5 @@ autowrap_mode = 2
 
 [node name="Label" type="Label" parent="DialogueBox/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Day 50: These vampires inheret the essensial fundamentals of a shadow, it would make more sense to give them the alchemical name of nocturnal vampires. "
+text = "Day 50: These vampires inherit the essensial fundamentals of a shadow, it would make more sense to give them the alchemical name of nocturnal vampires. "
 autowrap_mode = 2

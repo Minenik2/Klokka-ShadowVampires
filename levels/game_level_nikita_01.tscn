@@ -85,5 +85,5 @@ autowrap_mode = 2
 
 [node name="Label" type="Label" parent="DialogueBox/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Day 55: I've made a groundbreaking discovery, the vampire fang essensce leaves a trail of binary particles. This makes it susceptible to perform experimentation, I just need the right materials"
+text = "Day 55: I've made a groundbreaking discovery, the vampire fang essence leaves a trail of binary particles. This makes it susceptible to perform experimentation, I just need the right materials"
 autowrap_mode = 2
