@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://d2rqmu3p43yng"]
+[gd_scene load_steps=9 format=3 uid="uid://cdn5lrfaw5lie"]
 
 [ext_resource type="TileSet" uid="uid://bq1phjaxakua6" path="res://levels/new_tile_set.tres" id="1_xh6s5"]
 [ext_resource type="PackedScene" uid="uid://ef5in378d5n2" path="res://characters/player.tscn" id="2_6tq26"]
@@ -64,8 +64,7 @@ autowrap_mode = 2
 
 [node name="Label" type="Label" parent="DialogueBox/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "In truth, the nature of these vampiric creatures astounds me greatly. Their propensity for violence is perplexing, given the profound beauty that can be found in love and harmony.
-"
+text = "In truth, the nature of these vampiric creatures astounds me. Their propensity for violence is perplexing, given the profound beauty that can be found in love and harmony."
 autowrap_mode = 2
 
 [node name="Switch2" parent="." node_paths=PackedStringArray("laser_beam_scene") instance=ExtResource("5_r1ns8")]

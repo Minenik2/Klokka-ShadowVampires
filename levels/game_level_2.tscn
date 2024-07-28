@@ -120,5 +120,5 @@ autowrap_mode = 2
 
 [node name="Label" type="Label" parent="DialogueBox/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "We have figured out that the vampries, seem to be vulnerable to light, not allowing them to pass true it. Maybe we can use it to our advantage?"
+text = "We have figured out that the vampires seem to be vulnerable to light, not allowing them to pass through it. Maybe we can use this to our advantage?"
 autowrap_mode = 2

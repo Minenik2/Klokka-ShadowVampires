@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ef5in378d5n2" path="res://characters/player.tscn" id="4_0qx0k"]
 [ext_resource type="PackedScene" uid="uid://dfdt4kgbumhl2" path="res://levels/teleporter.tscn" id="6_8bu5i"]
 [ext_resource type="PackedScene" uid="uid://c1ywkqq5fdp5o" path="res://Switch/paper.tscn" id="7_nltxr"]
-[ext_resource type="PackedScene" uid="uid://d2rqmu3p43yng" path="res://levels/game_level_cyatmrw_01.tscn" id="7_y2eea"]
+[ext_resource type="PackedScene" uid="uid://cdn5lrfaw5lie" path="res://levels/game_level_cyatmrw_01.tscn" id="7_y2eea"]
 [ext_resource type="Script" path="res://levels/DialogueBox.gd" id="8_4u20f"]
 
 [node name="game_level_8" type="Node2D"]
@@ -68,5 +68,5 @@ autowrap_mode = 2
 
 [node name="Label" type="Label" parent="DialogueBox/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Day 15: The vampires seem to have the power to turn into shadows, they need to connect to a solid ground in order to do that, meaning that shadow turning is impossible while they're in the air"
+text = "Day 15: The vampires seem to have the power to transform into shadows, but they need to be connected to solid ground to do so, making shadow transformation impossible while they are in the air."
 autowrap_mode = 2

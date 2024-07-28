@@ -79,5 +79,5 @@ autowrap_mode = 2
 
 [node name="Label" type="Label" parent="DialogueBox/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Day 66: I've been bitten, it will take 7 days to become a full fledged shadow vampire, I must look for the remaining materials to find the cure, and find it fast"
+text = "Day 66: I've been bitten, it will take approximately 7 days to become a full fledged shadow vampire, I must look for the remaining materials to find the cure, or else I will become one of them.."
 autowrap_mode = 2
