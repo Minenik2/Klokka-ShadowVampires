@@ -20,6 +20,7 @@ func update_switch_visual():
 		sprite.frame = 1
 
 func flip_switch():
+	$AudioStreamPlayer2D.play()
 	is_on = !is_on
 	update_switch_visual()
 	update_laser()
