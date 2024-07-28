@@ -4,7 +4,7 @@
 [ext_resource type="TileSet" uid="uid://bq1phjaxakua6" path="res://levels/new_tile_set.tres" id="2_m7gfv"]
 [ext_resource type="PackedScene" uid="uid://is8f2nkogira" path="res://Switch/laser_turret.tscn" id="3_lss0u"]
 [ext_resource type="PackedScene" uid="uid://bbq0tlcnpwvm7" path="res://Switch/Switch.tscn" id="4_5bgtt"]
-[ext_resource type="PackedScene" path="res://Switch/indefinite_line_right_not_active.tscn" id="4_r61ra"]
+[ext_resource type="PackedScene" uid="uid://bdm0jip2s78qn" path="res://Switch/indefinite_line_right_not_active.tscn" id="4_r61ra"]
 [ext_resource type="PackedScene" uid="uid://dfdt4kgbumhl2" path="res://levels/teleporter.tscn" id="7_iifol"]
 [ext_resource type="PackedScene" uid="uid://bg8yxehs0aew8" path="res://levels/game_level_nikita_01.tscn" id="7_wkhk4"]
 [ext_resource type="PackedScene" uid="uid://c1ywkqq5fdp5o" path="res://Switch/paper.tscn" id="8_bc6hl"]
