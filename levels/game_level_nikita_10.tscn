@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bcwros7bp3tu0"]
+[gd_scene load_steps=10 format=3 uid="uid://bcwros7bp3tu0"]
 
 [ext_resource type="TileSet" uid="uid://bq1phjaxakua6" path="res://levels/new_tile_set.tres" id="1_sx1ub"]
 [ext_resource type="PackedScene" uid="uid://ef5in378d5n2" path="res://characters/player.tscn" id="2_oafxn"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bbq0tlcnpwvm7" path="res://Switch/Switch.tscn" id="5_5xxrh"]
 [ext_resource type="PackedScene" uid="uid://dfdt4kgbumhl2" path="res://levels/teleporter.tscn" id="6_6ja3o"]
 [ext_resource type="Script" path="res://levels/DialogueBox.gd" id="7_7jxhs"]
+[ext_resource type="PackedScene" uid="uid://bubt2kl3avmr1" path="res://levels/game_level_nikita_11.tscn" id="7_7m5oo"]
 [ext_resource type="PackedScene" uid="uid://bcu2emhovd6lg" path="res://Switch/special_item.tscn" id="8_oy7vk"]
 
 [node name="game_level_nikita_10" type="Node2D"]
@@ -48,6 +49,7 @@ position = Vector2(419, 324)
 
 [node name="exit" parent="." instance=ExtResource("6_6ja3o")]
 position = Vector2(565, 252)
+next_scene = ExtResource("7_7m5oo")
 
 [node name="DialogueBox" type="CanvasLayer" parent="."]
 script = ExtResource("7_7jxhs")
