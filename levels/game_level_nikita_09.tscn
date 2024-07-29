@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://qdw22a511gtc"]
+[gd_scene load_steps=10 format=3 uid="uid://qdw22a511gtc"]
 
 [ext_resource type="TileSet" uid="uid://bq1phjaxakua6" path="res://levels/new_tile_set.tres" id="1_xhbh8"]
 [ext_resource type="PackedScene" uid="uid://bbq0tlcnpwvm7" path="res://Switch/Switch.tscn" id="2_sy005"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dfdt4kgbumhl2" path="res://levels/teleporter.tscn" id="4_b55t3"]
 [ext_resource type="PackedScene" uid="uid://6on3qgshr4vk" path="res://Switch/indefinite_line_right.tscn" id="4_pfon0"]
 [ext_resource type="PackedScene" uid="uid://ef5in378d5n2" path="res://characters/player.tscn" id="5_f4pmo"]
+[ext_resource type="PackedScene" uid="uid://bcwros7bp3tu0" path="res://levels/game_level_nikita_10.tscn" id="6_c11e5"]
 [ext_resource type="PackedScene" uid="uid://c1ywkqq5fdp5o" path="res://Switch/paper.tscn" id="7_fc5iv"]
 [ext_resource type="Script" path="res://levels/DialogueBox.gd" id="8_licid"]
 
@@ -43,6 +44,7 @@ laser_direction = Vector2(0, 1)
 
 [node name="exit" parent="." instance=ExtResource("4_b55t3")]
 position = Vector2(517, 253)
+next_scene = ExtResource("6_c11e5")
 
 [node name="playerCat" parent="." instance=ExtResource("5_f4pmo")]
 position = Vector2(271, 325)
