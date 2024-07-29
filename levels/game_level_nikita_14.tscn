@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dpfj4fl03fj4y"]
+[gd_scene load_steps=10 format=3 uid="uid://dpfj4fl03fj4y"]
 
 [ext_resource type="TileSet" uid="uid://bq1phjaxakua6" path="res://levels/new_tile_set.tres" id="1_o0tqj"]
 [ext_resource type="PackedScene" uid="uid://is8f2nkogira" path="res://Switch/laser_turret.tscn" id="2_j42bu"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ef5in378d5n2" path="res://characters/player.tscn" id="5_40dmj"]
 [ext_resource type="Script" path="res://levels/DialogueBox.gd" id="7_ef7f2"]
 [ext_resource type="PackedScene" uid="uid://dfdt4kgbumhl2" path="res://levels/teleporter.tscn" id="8_y1ncq"]
+[ext_resource type="PackedScene" uid="uid://bbjbknl6je031" path="res://levels/game_level_nikita_15.tscn" id="9_bjw84"]
 
 [node name="game_level_nikita_14" type="Node2D"]
 y_sort_enabled = true
@@ -111,3 +112,4 @@ autowrap_mode = 2
 
 [node name="exit" parent="." instance=ExtResource("8_y1ncq")]
 position = Vector2(468, 275)
+next_scene = ExtResource("9_bjw84")
