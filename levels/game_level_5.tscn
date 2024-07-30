@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://is8f2nkogira" path="res://Switch/laser_turret.tscn" id="4_keokd"]
 [ext_resource type="PackedScene" uid="uid://6on3qgshr4vk" path="res://Switch/indefinite_line_right.tscn" id="5_0ysdw"]
 [ext_resource type="PackedScene" uid="uid://dfdt4kgbumhl2" path="res://levels/teleporter.tscn" id="6_6qlg1"]
-[ext_resource type="PackedScene" uid="uid://b4kysexrlfhp6" path="res://levels/game_level_6.tscn" id="7_oblm8"]
+[ext_resource type="PackedScene" uid="uid://bjnh4le4iewxo" path="res://levels/game_level_8.tscn" id="7_nckeh"]
 [ext_resource type="PackedScene" uid="uid://c1ywkqq5fdp5o" path="res://Switch/paper.tscn" id="8_h0qpe"]
 [ext_resource type="Script" path="res://levels/DialogueBox.gd" id="9_3gxum"]
 
@@ -48,7 +48,7 @@ laser_beam_scene = ExtResource("5_0ysdw")
 [node name="exit" parent="." instance=ExtResource("6_6qlg1")]
 position = Vector2(304, 86)
 scale = Vector2(1, 0.5)
-next_scene = ExtResource("7_oblm8")
+next_scene = ExtResource("7_nckeh")
 
 [node name="Paper" parent="." node_paths=PackedStringArray("dialogue_box") instance=ExtResource("8_h0qpe")]
 position = Vector2(330, 100)

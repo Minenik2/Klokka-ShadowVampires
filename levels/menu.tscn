@@ -1,0 +1,103 @@
+[gd_scene load_steps=13 format=3 uid="uid://clxw4ejd13wgp"]
+
+[ext_resource type="Script" path="res://levels/menu.gd" id="1_tnqej"]
+[ext_resource type="Texture2D" uid="uid://d350dvq0yrk86" path="res://art/myArt/startingscreen.png" id="3_yotkf"]
+
+[sub_resource type="Animation" id="Animation_6psq4"]
+resource_name = "text"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_bc61i"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1nsxk"]
+_data = {
+"RESET": SubResource("Animation_bc61i"),
+"text": SubResource("Animation_6psq4")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xts2c"]
+animation = &"text"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_j0dkw"]
+animation = &"text"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8k2sq"]
+animation = &"text"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tqs8q"]
+animation = &"text"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_5alqs"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_xts2c")
+blend_point_0/pos = Vector2(0, 0.9)
+blend_point_1/node = SubResource("AnimationNodeAnimation_j0dkw")
+blend_point_1/pos = Vector2(1, 0)
+blend_point_2/node = SubResource("AnimationNodeAnimation_8k2sq")
+blend_point_2/pos = Vector2(0, -0.7)
+blend_point_3/node = SubResource("AnimationNodeAnimation_tqs8q")
+blend_point_3/pos = Vector2(-1, 0)
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nfspd"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_vrp0n"]
+states/blink/node = SubResource("AnimationNodeBlendSpace2D_5alqs")
+states/blink/position = Vector2(364, 67)
+transitions = ["Start", "blink", SubResource("AnimationNodeStateMachineTransition_nfspd")]
+
+[node name="menu" type="Node2D"]
+script = ExtResource("1_tnqej")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 49.0
+offset_top = 50.0
+offset_right = 161.0
+offset_bottom = 65.0
+text = "NOCTURNAL ALCHEMIST"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -5
+position = Vector2(384, 317)
+texture = ExtResource("3_yotkf")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 35.0
+offset_top = 123.0
+offset_right = 180.0
+offset_bottom = 138.0
+text = "<Press SPACEBAR to start>"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Label2"]
+libraries = {
+"": SubResource("AnimationLibrary_1nsxk")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="Label2"]
+tree_root = SubResource("AnimationNodeStateMachine_vrp0n")
+anim_player = NodePath("../AnimationPlayer")
+parameters/blink/blend_position = Vector2(0.00160003, 0.015873)
