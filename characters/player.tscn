@@ -1,7 +1,7 @@
 [gd_scene load_steps=28 format=3 uid="uid://ef5in378d5n2"]
 
 [ext_resource type="Script" path="res://characters/player_cat.gd" id="1_2ur7g"]
-[ext_resource type="Texture2D" uid="uid://oyqxnap3ivj2" path="res://art/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Spritesheet.png" id="1_d0w5j"]
+[ext_resource type="Texture2D" uid="uid://oyqxnap3ivj2" path="res://art/myArt/character_florence_walk.png" id="2_y3ntk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_12vxg"]
 size = Vector2(7, 6)
@@ -235,7 +235,7 @@ transitions = ["idle", "walk", SubResource("AnimationNodeStateMachineTransition_
 script = ExtResource("1_2ur7g")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_d0w5j")
+texture = ExtResource("2_y3ntk")
 hframes = 4
 vframes = 4
 

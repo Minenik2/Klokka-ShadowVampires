@@ -17,3 +17,7 @@ func play_random_song():
 func _on_music_finished():
 	music_player.disconnect("finished", Callable(self, "_on_music_finished"))
 	play_random_song()
+
+func stop_music():
+	music_player.stop()
+	music_player.disconnect("finished", Callable(self, "_on_music_finished"))

@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bbjbknl6je031"]
+[gd_scene load_steps=10 format=3 uid="uid://bbjbknl6je031"]
 
 [ext_resource type="TileSet" uid="uid://bq1phjaxakua6" path="res://levels/new_tile_set.tres" id="1_thqeh"]
 [ext_resource type="PackedScene" uid="uid://ef5in378d5n2" path="res://characters/player.tscn" id="2_vtfsu"]
 [ext_resource type="PackedScene" uid="uid://dfdt4kgbumhl2" path="res://levels/teleporter.tscn" id="3_urcll"]
 [ext_resource type="PackedScene" uid="uid://is8f2nkogira" path="res://Switch/laser_turret.tscn" id="4_43wnl"]
+[ext_resource type="PackedScene" uid="uid://cd2xmlip1srvb" path="res://levels/game_level_nikita_16.tscn" id="4_ckjtj"]
 [ext_resource type="PackedScene" uid="uid://6on3qgshr4vk" path="res://Switch/indefinite_line_right.tscn" id="5_c6fm2"]
 [ext_resource type="PackedScene" uid="uid://bbq0tlcnpwvm7" path="res://Switch/Switch.tscn" id="6_l03c6"]
 [ext_resource type="PackedScene" uid="uid://c1ywkqq5fdp5o" path="res://Switch/paper.tscn" id="7_ydcig"]
@@ -28,6 +29,7 @@ position = Vector2(444, 311)
 
 [node name="exit" parent="." instance=ExtResource("3_urcll")]
 position = Vector2(456, 24)
+next_scene = ExtResource("4_ckjtj")
 
 [node name="Laser_Turret" parent="." instance=ExtResource("4_43wnl")]
 position = Vector2(401, 237)

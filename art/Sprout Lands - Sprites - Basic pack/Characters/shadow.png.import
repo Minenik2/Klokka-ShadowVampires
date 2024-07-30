@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oyqxnap3ivj2"
-path="res://.godot/imported/Basic Charakter Spritesheet.png-1cc609fed9eac17439409b3351191def.ctex"
+uid="uid://lrppw5ukt0nv"
+path="res://.godot/imported/shadow.png-b434afdabb312f46034b3b6bdd72af04.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Spritesheet.png"
-dest_files=["res://.godot/imported/Basic Charakter Spritesheet.png-1cc609fed9eac17439409b3351191def.ctex"]
+source_file="res://art/Sprout Lands - Sprites - Basic pack/Characters/shadow.png"
+dest_files=["res://.godot/imported/shadow.png-b434afdabb312f46034b3b6bdd72af04.ctex"]
 
 [params]
 
